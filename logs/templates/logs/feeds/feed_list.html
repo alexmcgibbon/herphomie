@@ -1,1 +1,16 @@
 <h1>Feeds List</h1>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Date</th>
+		<th>Success</th>
+	</tr>
+{% for feed in feeds %}
+	<tr>
+		<td>{{ feed.animal }}</td>
+		<td>{{ feed.date }}</td>
+		<td>{{ feed.success }}</td>
+	</tr>
+    	
+{% endfor %}
+</table>
