@@ -1,16 +1,31 @@
-<h1>Feeds List</h1>
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Date</th>
-		<th>Success</th>
-	</tr>
-{% for feed in feeds %}
-	<tr>
-		<td>{{ feed.animal }}</td>
-		<td>{{ feed.date }}</td>
-		<td>{{ feed.success }}</td>
-	</tr>
-    	
-{% endfor %}
-</table>
+<head>
+	<Title>Feeds</Title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+	<div class="row py-3">
+	<h1>Feeds List</h1>
+	</div>
+	<div class="row">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col">Animal's Name</th>
+				<th scope="col">Date Offered</th>
+				<th scope="col">Successful Feed?</th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for feed in feeds %}
+			<tr>
+				<td>{{ feed.animal }}</td>
+				<td>{{ feed.date }}</td>
+				<td>{{ feed.success }}</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	</div>
+</div>
+</body>
