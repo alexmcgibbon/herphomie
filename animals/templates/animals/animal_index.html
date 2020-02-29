@@ -15,11 +15,11 @@
 			</tr>
 		</thead>
 		<tbody>
-		{% for feed in feeds %}
+		{% for animal in animals %}
 			<tr>
-				<td>{{ feed.animal }}</td>
-				<td>{{ feed.date }}</td>
-				<td>{{ feed.success }}</td>
+				<td>{{ animal.name }}</td>
+				<td>{{ animal.species }}</td>
+				<td>{{ animal.date_aquired }}</td>
 			</tr>
 		{% endfor %}
 		</tbody>
